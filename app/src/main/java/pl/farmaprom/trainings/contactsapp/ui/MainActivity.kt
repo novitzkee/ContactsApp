@@ -2,42 +2,24 @@ package pl.farmaprom.trainings.contactsapp.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import pl.farmaprom.trainings.contactsapp.ui.theme.ContactsAppTheme
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import pl.farmaprom.trainings.contactsapp.R
+import pl.farmaprom.trainings.contactsapp.contacts.data.ContactListMock
+import pl.farmaprom.trainings.contactsapp.contacts.view.ContactListViewAdapter
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            ContactsAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.surface
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
+        setContentView(R.layout.activity_main)
+        createContactList()
     }
-}
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ContactsAppTheme {
-        Greeting("Android")
+    private fun createContactList() {
+        val dataMock = ContactListMock(applicationContext)
+        val adapter = ContactListViewAdapter(dataMock, {})
+        val list = findViewById<RecyclerView>(R.id.contact_list)
+        list.adapter = adapter
+        list.layoutManager = LinearLayoutManager(this)
     }
 }
