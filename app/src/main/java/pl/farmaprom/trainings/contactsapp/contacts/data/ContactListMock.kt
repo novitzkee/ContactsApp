@@ -45,5 +45,5 @@ class ContactListMock(context: Context) : ContactList {
 fun <T> Array<T>.pick(random: Random): T = this[random.nextInt(this.size)]
 
 fun randomPhoneNumber(random: Random): String =
-    (1..9).map { _ -> random.nextInt(9) }.joinToString()
+    (1..9).map { _ -> random.nextInt(9) }.joinToString(separator = "")
 
