@@ -10,12 +10,18 @@ import pl.farmaprom.trainings.contactsapp.R
 import pl.farmaprom.trainings.contactsapp.contacts.data.Contact
 import pl.farmaprom.trainings.contactsapp.contacts.data.ContactListMock
 import pl.farmaprom.trainings.contactsapp.contacts.view.ContactListViewAdapter
+import pl.farmaprom.trainings.contactsapp.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        bindView()
         createContactList()
+    }
+
+    private fun bindView() {
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     private fun createContactList() {

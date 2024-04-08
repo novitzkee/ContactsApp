@@ -36,7 +36,9 @@ class ContactListMock(context: Context) : ContactList {
                     )
                 }
             }
-        }.take(30).toList()
+        }.take(25)
+            .sortedWith(compareBy(Contact::name, Contact::surname))
+            .toList()
     }
 
     override fun getAllContacts() = contacts
