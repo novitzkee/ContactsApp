@@ -6,7 +6,7 @@ import pl.farmaprom.trainings.contactsapp.contacts.data.Contact
 const val API_URL = "http://trainingcontactsapp-env.eba-x3t56ejz.eu-central-1.elasticbeanstalk.com/"
 const val API_KEY = ""
 
-val sampleData = listOf(
+/*val sampleData = listOf(
     Contact(
         id = 1L,
         name = "Golden",
@@ -25,4 +25,4 @@ val sampleData = listOf(
         profileImageUrl = "https://raw.githubusercontent.com/kamilruchalaf/trainingassets/main/assets/face1.png",
         isFavourite = false
     )
-)
+)*/

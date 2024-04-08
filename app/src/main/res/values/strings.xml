@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">ContactsApp</string>
+    <string name="call">Call</string>
+    <string-array name="female_mock_names">
+        <item>Alicja</item>
+        <item>Hanna</item>
+        <item>Laura</item>
+        <item>Oliwia</item>
+        <item>Zofia</item>
+    </string-array>
+    <string-array name="female_mock_surnames">
+        <item>Jankowska</item>
+        <item>Kaźmierczak</item>
+        <item>Lis</item>
+        <item>Woźniak</item>
+        <item>Zakrzewska</item>
+    </string-array>
+    <string-array name="male_mock_names">
+        <item>Andrzej</item>
+        <item>Franciszek</item>
+        <item>Mikołaj</item>
+        <item>Jakub</item>
+        <item>Stanisław</item>
+    </string-array>
+    <string-array name="male_mock_surnames">
+        <item>Chmielewski</item>
+        <item>Mróz</item>
+        <item>Tomaszewski</item>
+        <item>Walczak</item>
+        <item>Zawadzki</item>
+    </string-array>
 </resources>
